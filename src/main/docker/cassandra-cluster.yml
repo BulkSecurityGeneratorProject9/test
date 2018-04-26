@@ -1,0 +1,22 @@
+version: '2'
+services:
+    test-cassandra:
+        image: cassandra:3.9
+        # volumes:
+        #     - ~/volumes/jhipster/test/cassandra/:/var/lib/cassandra/data
+        ports:
+            - 7000:7000
+            - 7001:7001
+            - 7199:7199
+            - 9042:9042
+            - 9160:9160
+    test-cassandra-node:
+        image: cassandra:3.9
+        environment:
+            - CASSANDRA_SEEDS=test-cassandra
+    test-cassandra-migration:
+        extends:
+            file: cassandra-migration.yml
+            service: test-cassandra-migration
+        environment:
+            - CREATE_KEYSPACE_SCRIPT=create-keyspace-prod.cql
