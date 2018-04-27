@@ -1,0 +1,20 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "agentNumber",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "agentName",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180427071434",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "agent_master",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

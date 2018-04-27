@@ -1,0 +1,27 @@
+
+<div>
+    <h2><span>Agent Master</span> {{vm.agentMaster.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Agent Number</span></dt>
+        <dd>
+            <span>{{vm.agentMaster.agentNumber}}</span>
+        </dd>
+        <dt><span>Agent Name</span></dt>
+        <dd>
+            <span>{{vm.agentMaster.agentName}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="agent-master-detail.edit({id:vm.agentMaster.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>
